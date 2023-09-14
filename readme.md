@@ -5,7 +5,8 @@ A codebase of a .NET app that lets you use an Azure keyvault variable to connect
 
 1) Make sure you have created the SQL database and keyvault with the password stored in the keyvault
 2) Make sure you have some data stored in your SQL (Can use data studio)
-3) Make sure you have dotnet SDK installed 
+3) Make sure you have dotnet SDK installed
+4) Make sure you have nuget package Microsoft.Data.SqlClient installed
 
 
 # Steps
