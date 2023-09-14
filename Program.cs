@@ -16,19 +16,19 @@ SecretClientOptions options = new SecretClientOptions()
             Mode = RetryMode.Exponential
          }
     };
-var client = new SecretClient(new Uri("https://shreya-kv.vault.azure.net/"), new DefaultAzureCredential(),options);
+var client = new SecretClient(new Uri("<your-kv-uri>"), new DefaultAzureCredential(),options);
 // or if accessing the keyvault reference use the Configuration.Get () method
-KeyVaultSecret secret = client.GetSecret("shreya-shah-1");
+KeyVaultSecret secret = client.GetSecret("<name-of-secret>");
 string str="";
 string secretValue = secret.Value;
  
 try 
             { 
                 SqlConnectionStringBuilder builder2 = new SqlConnectionStringBuilder();
-                builder2.DataSource = "shreya-db-server.database.windows.net"; 
-                builder2.UserID = "shreya";            
+                builder2.DataSource = "<name-of-your-sql-server>.database.windows.net"; 
+                builder2.UserID = "<your-sql-username>";            
                 builder2.Password = secretValue;     
-                builder2.InitialCatalog = "shreya-db";
+                builder2.InitialCatalog = "<your-sql-db-name>";
 
                 using (SqlConnection connection = new SqlConnection(builder2.ConnectionString))
                 {
