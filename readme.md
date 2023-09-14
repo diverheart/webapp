@@ -1,5 +1,5 @@
 # Overview
-A codebase of a .NET app that lets you use an Azure keyvault variable to connect to Azure SQL databse
+A codebase of a .NET app that lets you use an Azure keyvault variable to connect to Azure SQL database
 
 # Prequisites
 
